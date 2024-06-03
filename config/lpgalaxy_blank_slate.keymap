@@ -94,7 +94,7 @@
 &trans    &center_dot     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
 &trans    &triple_dot     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
 &trans    &lg_m Q         &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
-&trans    &trans          &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
+&trans    &trans          &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp LC(LG(SPACE))
             >;
         };
     };
