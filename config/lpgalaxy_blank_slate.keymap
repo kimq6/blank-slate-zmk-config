@@ -146,10 +146,10 @@
         hangul_layer {
             display-name = "hangul";
             bindings = <
-&kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q
-&kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q
-&kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &trans    &kp Q
-&kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q
+&trans    &lg_m Q    &lg_m W    &lg_m E    &lg_m R    &lg_m T    &lg_m Y    &lg_m U    &lg_m I    &lg_m O    &lg_m P    &trans
+&trans    &lg_m A    &lg_m S    &lg_m D    &lg_m F    &lg_m G    &lg_m H    &lg_m J    &lg_m K    &lg_m L    &trans     &trans
+&trans    &lg_m Z    &lg_m X    &lg_m C    &lg_m V    &trans     &lg_m B    &lg_m N    &lg_m M    &trans     &trans     &trans
+&trans    &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
             >;
         };
 
