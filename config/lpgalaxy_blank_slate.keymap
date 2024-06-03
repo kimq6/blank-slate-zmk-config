@@ -15,7 +15,6 @@
 
 // layers
 #define ARR_L 1
-#define CMD_L 2
 
 // lt config
 &lt { quick_tap_ms = <200>; };
@@ -91,9 +90,9 @@
         arr_layer {
             display-name = "Arrow";
             bindings = <
-&trans    &center_dot     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp C_MUTE   &kp C_VOL_DN   &kp C_VOL_UP
-&trans    &triple_dot     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp C_BRI_DN   &kp C_BRI_UP
-&trans    &lg_m Q         &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
+&trans    &center_dot     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
+&trans    &triple_dot     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
+&trans    &lg_m Q         &sk LSHFT  &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
 &trans    &trans          &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
             >;
         };
