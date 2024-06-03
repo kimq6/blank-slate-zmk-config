@@ -72,7 +72,7 @@
             tap-ms = <40>;
             bindings
                 = <&macro_tap &kp LANG1>
-                , <&macro_param_2to1>
+                , <&macro_param_1to1>
                 , <&macro_tap &kp MACRO_PLACEHOLDER>
                 , <&macro_tap &kp LANG1>
                 ;
