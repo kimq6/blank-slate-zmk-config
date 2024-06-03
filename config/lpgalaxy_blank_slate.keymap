@@ -106,7 +106,7 @@
         cmd_layer {
             display-name = "cmd";
             bindings = <
-&kp CAPS   &kp LALT(F4)   &kp LC(W)    &kp LC(E)   &kp LC(R)    &kp LC(T)       &trans     &trans    &kp LA(8)       &trans        &trans      &trans
+&kp CAPS   &kp LALT(F4)   &kp LC(W)    &kp LC(E)   &kp LC(R)    &kp LC(T)       &trans     &trans    &kp LA(N8)      &trans        &trans      &trans
 &kp TAB    &kp LC(A)      &kp LC(S)    &kp LC(D)   &kp LC(F)    &kp PSCRN       &trans     &trans    &trans          &kp LA(SEMI)  &trans      &trans
 &trans     &kp LC(Z)      &kp LC(X)    &kp LC(C)   &kp LC(V)    &kp LC(LS(V))   &trans     &trans    &kp LG(KP_DOT)  &trans        &kp LANG2   &trans
 &trans     &trans         &trans       &trans      &trans       &trans          &trans     &trans    &trans          &trans        &trans      &trans
