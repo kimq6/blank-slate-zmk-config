@@ -126,10 +126,10 @@
         sym_layer {
             display-name = "Sym";
             bindings = <
-&kp N1     &kp N2     &kp N3     &kp N4     &kp N5     &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp Q     &kp W
-&kp N1     &kp N2     &kp N3     &kp N4     &kp N5     &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp Q     &kp W
-&kp N1     &kp N2     &kp N3     &kp N4     &kp N5     &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp Q     &kp W
-&kp N1     &kp N2     &kp N3     &kp N4     &kp N5     &kp N6     &trans     &kp N8     &kp N9     &kp N0     &kp Q     &kp W
+&kp GRAVE  &kp EXCL   &kp AT     &kp HASH   &kp DOLLAR   &kp PERCENT  &kp CARET    &kp AMPS   &kp ASTRK   &kp LPAR    &kp RPAR   &kp UNDER
+&kp TILDE  &kp LBKT   &kp RBKT   &kp LBRC   &kp RBRC     &center_dot  &triple_dot  &kp LT     &kp GT      &kp QMARK   &kp SEMI   &kp SQT
+&kp EQUAL  &kp PLUS   &kp MINUS  &kp STAR   &kp SLASH    &kp PIPE     &kp BSLH     &kp COMMA  &kp DOT     &kp SLASH   &kp COLON  &kp DQT
+&trans     &trans     &trans     &trans     &trans       &trans       &trans       &trans     &trans      &trans      &trans     &trans
             >;
         };
 
