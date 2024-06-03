@@ -156,10 +156,10 @@
         onehand_layer {
             display-name = "onehand";
             bindings = <
-&kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q
-&kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q
-&kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q
-&kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &kp Q     &trans
+&trans    &trans    &trans    &trans    &trans    &trans    &kp ESC   &kp Q     &kp W     &kp E     &kp R     &kp T
+&trans    &trans    &trans    &trans    &trans    &trans    &kp TAB   &kp A     &kp S     &kp D     &kp F     &kp G
+&trans    &trans    &trans    &trans    &trans    &trans    &sk LSHFT &kp Z     &kp X     &kp C     &kp V     &sk LWIN
+&trans    &trans    &trans    &trans    &trans    &trans    &sk LCTRL &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &trans
             >;
         };
     };
