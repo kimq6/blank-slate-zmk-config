@@ -132,16 +132,16 @@
 &kp TAB     &kp PG_UP    &kp LS(LEFT)   &kp UP        &kp LS(RIGHT)   &kp DEL      &trans      &kp N7         &kp N8      &kp N9     &kp DEL              &trans
 &none       &kp PG_DN    &kp LEFT       &kp DOWN      &kp RIGHT       &kp BSPC     &trans      &kp N4         &kp N5      &kp N6     &trans               &trans
 &trans      &kp PSCRN    &kp HOME       &mkp MB4      &kp END         &mkp MB5     &kp INS     &kp N1         &kp N2      &kp N3     &kp LC(LG(SPACE))    &trans
-&trans      &trans       &kp LALT       &kp LWIN      &kp LCTRL       &kp SPACE    &kp SPACE   &trans         &kp N0      &trans     &trans               &trans
+&trans      &trans       &kp LALT       &kp LWIN      &kp LCTRL       &kp SPACE    &kp SPACE   &trans         &kp N0      &trans     &trans               &kp RALT
             >;
         };
 
         cmd_layer {
             display-name = "cmd";
             bindings = <
-&kp CAPS   &kp LA(F4)     &kp LC(W)    &kp LC(E)   &kp LC(R)    &kp LC(T)       &trans     &trans     &kp UP          &trans        &trans      &trans
+&trans     &kp LA(F4)     &kp LC(W)    &kp LC(E)   &kp LC(R)    &kp LC(T)       &trans     &trans     &kp UP          &trans        &trans      &trans
 &kp TAB    &kp LC(A)      &kp LC(S)    &kp LC(D)   &kp LC(F)    &kp PSCRN       &trans     &kp LEFT   &kp DOWN        &kp RIGHT     &trans      &trans
-&trans     &kp LC(Z)      &kp LC(X)    &kp LC(C)   &kp LC(V)    &kp LC(LS(V))   &trans     &trans     &kp LG(KP_DOT)  &trans        &kp LANG2   &trans
+&kp CAPS   &kp LC(Z)      &kp LC(X)    &kp LC(C)   &kp LC(V)    &kp LC(LS(V))   &trans     &trans     &kp LG(KP_DOT)  &trans        &kp LANG2   &trans
 &trans     &trans         &trans       &trans      &none        &trans          &trans     &trans     &trans          &trans        &trans      &trans
             >;
         };
@@ -152,7 +152,7 @@
 &kp KP_NUM  &kp N1      &kp N2    &kp N3    &kp N4    &kp N5       &kp N6       &kp KP_N7  &kp KP_N8   &kp KP_N9    &kp N0        &kp KP_EQUAL
 &trans      &kp F1      &kp F2    &kp F3    &kp F4    &kp F5       &kp F6       &kp KP_N4  &kp KP_N5   &kp KP_N6    &kp BSPC      &kp KP_ENTER
 &trans      &kp F7      &kp F8    &kp F9    &kp F10   &kp F11      &kp F12      &kp KP_N1  &kp KP_N2   &kp KP_N3    &kp KP_PLUS   &kp KP_MULTIPLY
-&kp GRAVE   &trans      &trans    &trans    &trans    &kp SPACE    &kp SPACE    &none      &kp KP_N0   &kp KP_DOT   &kp KP_MINUS  &kp KP_DIVIDE
+&trans      &trans      &trans    &trans    &trans    &kp SPACE    &kp SPACE    &none      &kp KP_N0   &kp KP_DOT   &kp KP_MINUS  &kp KP_DIVIDE
             >;
         };
 
@@ -181,7 +181,7 @@
             bindings = <
 &trans    &lg_m Q    &lg_m W    &lg_m E    &lg_m R    &lg_m T    &lg_m Y    &lg_m U    &lg_m I    &lg_m O    &lg_m P    &trans
 &trans    &lg_m A    &lg_m S    &lg_m D    &lg_m F    &lg_m G    &lg_m H    &lg_m J    &lg_m K    &lg_m L    &trans     &trans
-&trans    &lg_m Z    &lg_m X    &lg_m C    &lg_m V    &trans     &lg_m B    &lg_m N    &lg_m M    &trans     &none      &trans
+&trans    &lg_m Z    &lg_m X    &lg_m C    &lg_m V    &trans     &lg_m B    &lg_m N    &lg_m M    &kp CAPS   &none      &trans
 &trans    &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
             >;
         };
