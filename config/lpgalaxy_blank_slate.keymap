@@ -37,10 +37,8 @@
             tapping-term-ms = <150>;
             bindings = <&kp RSHFT>, <&caps_word>;
 	    };
-    };
 
-    behaviors {
-        usb_bt: change_device {
+        usbbt: change_device {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
@@ -105,7 +103,7 @@
             bindings = <
 &kp ESC    &kp Q      &kp W      &kp E       &kp R          &kp T          &kp Y            &kp U          &kp I       &kp O        &kp P         &kp DEL
 &mo ARR_L  &kp A      &kp S      &kp D       &kp F          &kp G          &kp H            &kp J          &kp K       &kp L        &kp BSPC      &kp ENTER
-&kp LSHFT  &kp Z      &kp X      &kp C       &kp V          &mo SYM_L      &kp B            &kp N          &kp M       &bt BT_NXT   &lt 5 LANG1   &rshifty
+&kp LSHFT  &kp Z      &kp X      &kp C       &kp V          &mo SYM_L      &kp B            &kp N          &kp M       &usbbt       &lt 5 LANG1   &rshifty
 &mo MAC_L  &kp GLOBE  &kp LALT   &kp LWIN    &kp LCTRL      &kp SPACE      &kp SPACE        &mo NUM_L      &kp RCTRL   &kp RWIN     &kp RALT      &mo ONE_L
             >;
         };
