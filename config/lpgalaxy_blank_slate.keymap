@@ -40,7 +40,7 @@
     };
 
     behaviors {
-        change_device: change_device {
+        usb_bt: change_device {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
