@@ -20,7 +20,7 @@
 #define MAC_L 4
 #define HAN_L 5
 #define ONE_L 6
-#define BLT_L 7
+#define CON_L 7
 
 // lt config
 &lt { quick_tap_ms = <200>; };
@@ -43,7 +43,7 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
-            if-layers = <1 2>;
+            if-layers = <2 3>;
             then-layer = <7>;
         };
     };
@@ -161,13 +161,13 @@
             >;
         };
 
-        bluetooth_layer {
-            display-name = "Bluetooth";
+        conditional_layer {
+            display-name = "conditional";
             bindings = <
-&bt BT_CLR_ALL &bt BT_CLR      &out OUT_BLE     &out OUT_USB    &out OUT_TOG    &trans          &trans    &trans    &trans       &trans       &trans    &trans
-&none          &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &trans    &trans    &trans       &trans       &trans    &trans
-&trans         &bt BT_DISC 0   &bt BT_DISC 1    &bt BT_DISC 2   &bt BT_DISC 3   &bt BT_DISC 4   &trans    &trans    &trans       &trans       &trans    &trans
-&trans         &bt BT_PRV      &bt BT_NXT       &trans          &trans          &trans          &trans    &none     &trans       &trans       &trans    &trans
+&trans    &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
+&trans    &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
+&trans    &trans     &trans     &trans     &trans     &none      &trans     &trans     &trans     &trans     &trans     &trans
+&trans    &trans     &trans     &trans     &trans     &trans     &trans     &none      &trans     &trans     &trans     &trans
             >;
         };
     };
