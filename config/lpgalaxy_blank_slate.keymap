@@ -135,7 +135,7 @@
             display-name = "Macro";
             bindings = <
 &win_off  &kp C_PREV    &kp C_STOP    &kp C_PP      &kp C_NEXT    &trans        &trans    &kp C_BRI_DN &kp C_BRI_UP &kp C_MUTE   &kp C_VOL_DN   &kp C_VOL_UP
-&trans    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans    &trans       &trans       &trans       &trans         &trans
+&trans    &trans        &trans        &trans        &trans        &trans        &trans    &trans       &trans       &trans       &trans         &trans
 &siql     &trans        &trans        &trans        &trans        &trans        &trans    &trans       &trans       &trans       &trans         &trans
 &none     &trans        &trans        &trans        &trans        &trans        &trans    &trans       &trans       &trans       &trans         &trans
             >;
@@ -154,12 +154,13 @@
         onehand_layer {
             display-name = "Onehand";
             bindings = <
-&trans    &trans    &trans    &trans    &trans    &trans    &kp ESC   &kp Q     &kp W     &kp E     &kp R     &kp T
-&trans    &trans    &trans    &trans    &trans    &trans    &kp TAB   &kp A     &kp S     &kp D     &kp F     &kp G
-&trans    &trans    &trans    &trans    &trans    &trans    &sk LSHFT &kp Z     &kp X     &kp C     &kp V     &sk LWIN
-&trans    &trans    &trans    &trans    &trans    &trans    &sk LCTRL &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none
+&bt BT_CLR     &out OUT_BLE    &out OUT_USB     &bt BT_PRV      &bt BT_NXT      &trans          &kp ESC    &kp Q     &kp W     &kp E     &kp R     &kp T
+&out OUT_TOG   &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &kp TAB    &kp A     &kp S     &kp D     &kp F     &kp G
+&trans         &bt BT_DISC 0   &bt BT_DISC 1    &bt BT_DISC 2   &bt BT_DISC 3   &bt BT_DISC 4   &sk LSHFT  &kp Z     &kp X     &kp C     &kp V     &sk LWIN
+&bt BT_CLR_ALL &trans          &trans           &trans          &trans          &trans          &sk LCTRL  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none
             >;
         };
+
         bluetooth_layer {
             display-name = "Bluetooth";
             bindings = <
