@@ -25,6 +25,9 @@
 // lt config
 &lt { quick_tap_ms = <200>; };
 
+// soft off config
+&soft_off {hold-time-ms = <2000>; };
+
 // keymap
 / {
     chosen {zmk,matrix_transform = &ortho_transform;};
@@ -66,6 +69,7 @@
         win_off: win_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            hold-time-ms = <2000>;  // 2초이상 눌러야 작동
             wait-ms = <40>;
             tap-ms = <40>;
             bindings
@@ -134,10 +138,10 @@
         macro_layer {
             display-name = "Macro";
             bindings = <
-&win_off  &kp C_PREV    &kp C_STOP    &kp C_PP      &kp C_NEXT    &trans        &trans    &kp C_BRI_DN &kp C_BRI_UP &kp C_MUTE   &kp C_VOL_DN   &kp C_VOL_UP
-&trans    &trans        &trans        &trans        &trans        &trans        &trans    &trans       &trans       &trans       &trans         &trans
-&siql     &trans        &trans        &trans        &trans        &trans        &trans    &trans       &trans       &trans       &trans         &trans
-&none     &trans        &trans        &trans        &trans        &trans        &trans    &trans       &trans       &trans       &trans         &trans
+&win_off  &soft_off     &kp C_PREV    &kp C_STOP    &kp C_PP      &kp C_NEXT  &trans    &kp C_BRI_DN  &kp C_BRI_UP  &kp C_MUTE   &kp C_VOL_DN   &kp C_VOL_UP
+&trans    &trans        &trans        &trans        &trans        &trans      &trans    &trans        &trans        &trans       &trans         &trans
+&siql     &trans        &trans        &trans        &trans        &trans      &trans    &trans        &trans        &trans       &trans         &trans
+&none     &trans        &trans        &trans        &trans        &trans      &trans    &trans        &trans        &trans       &trans         &trans
             >;
         };
 
