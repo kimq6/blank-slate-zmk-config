@@ -30,7 +30,10 @@
 
 // keymap
 / {
-    chosen {zmk,matrix_transform = &ortho_transform;};
+    chosen {
+        zmk,matrix_transform = &ortho_transform;
+        zmk,kscan = &kscan0;
+        };
     
     // tap dance term
     tap_dances {
@@ -90,6 +93,38 @@
         };
     };
 
+    behaviors {
+        hw_soft_off: hw_soft_off {
+            compatible = "zmk,behavior-soft-off";
+            #binding-cells = <0>;
+            hold-time-ms = <5000>;
+        };
+    };
+
+    soft_off_behavior_key {
+        compatible = "zmk,gpio-key-behavior-trigger";
+        bindings = <&hw_soft_off>;
+        key = <&wakeup_key>;
+    };
+
+    kscan0: kscan_0 {
+        compatible = "zmk,kscan-gpio-matrix";
+        label = "KSCAN";
+        wakeup-source;
+    };
+
+    wakeup_source: wakeup_source {
+        compatible = "zmk,gpio-key-wakeup-trigger";
+
+        trigger = <&wakeup_key>;
+        wakeup-source;
+    };
+
+    soft_off_wakers {
+        compatible = "zmk,soft-off-wakeup-sources";
+        wakeup-sources = <&wakeup_source>;
+    };
+
     // keymap
     keymap {
         compatible = "zmk,keymap";
@@ -137,7 +172,7 @@
         macro_layer {
             display-name = "Macro";
             bindings = <
-&win_off  &soft_off     &kp C_PREV    &kp C_STOP    &kp C_PP      &kp C_NEXT  &trans    &kp C_BRI_DN  &kp C_BRI_UP  &kp C_MUTE   &kp C_VOL_DN   &kp C_VOL_UP
+&win_off  &wakeup_key   &kp C_PREV    &kp C_STOP    &kp C_PP      &kp C_NEXT  &trans    &kp C_BRI_DN  &kp C_BRI_UP  &kp C_MUTE   &kp C_VOL_DN   &kp C_VOL_UP
 &trans    &trans        &trans        &trans        &trans        &trans      &trans    &trans        &trans        &trans       &trans         &trans
 &siql     &trans        &trans        &trans        &trans        &trans      &trans    &trans        &trans        &trans       &trans         &trans
 &none     &trans        &trans        &trans        &trans        &trans      &trans    &trans        &trans        &trans       &trans         &trans
