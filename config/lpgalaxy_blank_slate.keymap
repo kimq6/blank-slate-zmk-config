@@ -93,9 +93,18 @@
         };
     };
 
+    behaviors {
+        hw_soft_off: hw_soft_off {
+            compatible = "zmk,behavior-soft-off";
+            #binding-cells = <0>;
+            hold-time-ms = <5000>;
+        };
+    };
+
     soft_off_behavior_key {
-        compatible = "zmk,gpio-key-behavior-trigger";
-        bindings = <&soft_off>;
+        compatible = "zmk,gpio-scanned-key-behavior-trigger";
+        status = "okay";
+        bindings = <&hw_soft_off>;
         key = <&wakeup_key>;
     };
 
