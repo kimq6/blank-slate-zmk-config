@@ -25,8 +25,8 @@
 // lt config
 &lt { quick_tap_ms = <200>; };
 
-// soft off config
-&soft_off {hold-time-ms = <2000>; };
+// // soft off config
+// &soft_off {hold-time-ms = <2000>; };
 
 // keymap
 / {
@@ -97,7 +97,7 @@
         hw_soft_off: hw_soft_off {
             compatible = "zmk,behavior-soft-off";
             #binding-cells = <0>;
-            hold-time-ms = <5000>;
+            hold-time-ms = <2000>;
         };
     };
 
