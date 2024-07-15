@@ -101,7 +101,7 @@
     };
 
     behaviors {
-        hw_soft_off: hw_soft_off {
+        hw_soft_off_1: hw_soft_off_1 {
             compatible = "zmk,behavior-soft-off";
             #binding-cells = <0>;
             hold-time-ms = <5000>;
@@ -110,7 +110,7 @@
 
     soft_off_behavior_key {
         compatible = "zmk,gpio-key-behavior-trigger";
-        bindings = <&hw_soft_off>;
+        bindings = <&hw_soft_off_1>;
         key = <&wakeup_key>;
     };
 
