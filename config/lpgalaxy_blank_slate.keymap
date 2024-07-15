@@ -150,7 +150,7 @@
         macro_layer {
             display-name = "Macro";
             bindings = <
-&win_off  &on_off_key   &kp C_PREV    &kp C_STOP    &kp C_PP      &kp C_NEXT  &trans    &kp C_BRI_DN  &kp C_BRI_UP  &kp C_MUTE   &kp C_VOL_DN   &kp C_VOL_UP
+&win_off  &soft_off     &kp C_PREV    &kp C_STOP    &kp C_PP      &kp C_NEXT  &trans    &kp C_BRI_DN  &kp C_BRI_UP  &kp C_MUTE   &kp C_VOL_DN   &kp C_VOL_UP
 &trans    &trans        &trans        &trans        &trans        &trans      &trans    &trans        &trans        &trans       &trans         &trans
 &siql     &trans        &trans        &trans        &trans        &trans      &trans    &trans        &trans        &trans       &trans         &trans
 &none     &trans        &trans        &trans        &trans        &trans      &trans    &trans        &trans        &trans       &trans         &trans
