@@ -93,45 +93,6 @@
         };
     };
 
-    keys {
-        compatible = "gpio-keys";
-        wakeup_key: wakeup_key {
-            gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        };
-    };
-
-    soft_off_behaviors_1 {
-        hw_soft_off_1: hw_soft_off_1 {
-            compatible = "zmk,behavior-soft-off";
-            #binding-cells = <0>;
-            hold-time-ms = <5000>;
-        };
-    };
-
-    soft_off_behavior_key {
-        compatible = "zmk,gpio-key-behavior-trigger";
-        bindings = <&hw_soft_off_1>;
-        key = <&wakeup_key>;
-    };
-
-    kscan0: kscan {
-        compatible = "zmk,kscan-gpio-matrix";
-        label = "KSCAN";
-        wakeup-source;
-    };
-
-    wakeup_source: wakeup_source {
-        compatible = "zmk,gpio-key-wakeup-trigger";
-
-        trigger = <&wakeup_key>;
-        wakeup-source;
-    };
-
-    soft_off_wakers {
-        compatible = "zmk,soft-off-wakeup-sources";
-        wakeup-sources = <&wakeup_source>;
-    };
-
     // keymap
     keymap {
         compatible = "zmk,keymap";
