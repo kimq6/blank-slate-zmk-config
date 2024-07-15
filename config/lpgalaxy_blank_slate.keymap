@@ -30,7 +30,7 @@
 
 soft_off_direct_scan: soft_off_direct_scan {
     compatible = "zmk,kscan-gpio-direct";
-    input-keys = <&soft_off>;
+    input-keys = <&on_off_key>;
     wakeup-source;
 };
 
