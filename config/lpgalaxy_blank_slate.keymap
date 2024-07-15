@@ -93,10 +93,24 @@
         };
     };
 
+    keys {
+        compatible = "gpio-keys";
+        wakeup_key: wakeup_key {
+            gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        };
+    };
+
+    behaviors {
+        hw_soft_off: hw_soft_off {
+            compatible = "zmk,behavior-soft-off";
+            #binding-cells = <0>;
+            hold-time-ms = <5000>;
+        };
+    };
+
     soft_off_behavior_key {
-        compatible = "zmk,gpio-scanned-key-behavior-trigger";
-        status = "okay";
-        bindings = <&soft_off>;
+        compatible = "zmk,gpio-key-behavior-trigger";
+        bindings = <&hw_soft_off>;
         key = <&wakeup_key>;
     };
 
