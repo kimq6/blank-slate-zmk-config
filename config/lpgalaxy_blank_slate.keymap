@@ -100,7 +100,7 @@
         };
     };
 
-    behaviors {
+    soft_off_behaviors_1 {
         hw_soft_off_1: hw_soft_off_1 {
             compatible = "zmk,behavior-soft-off";
             #binding-cells = <0>;
