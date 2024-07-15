@@ -69,7 +69,6 @@
         win_off: win_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            hold-time-ms = <2000>;  // 2초이상 눌러야 작동
             wait-ms = <40>;
             tap-ms = <40>;
             bindings
