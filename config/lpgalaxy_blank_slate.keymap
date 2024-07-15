@@ -25,8 +25,8 @@
 // lt config
 &lt { quick_tap_ms = <200>; };
 
-// soft off config
-&soft_off {hold-time-ms = <2000>; };
+// // soft off config
+// &soft_off {hold-time-ms = <2000>; };
 
 // keymap
 / {
