@@ -102,16 +102,16 @@
 &kp ESC    &kp Q      &kp W      &kp E       &kp R          &kp T          &kp Y            &kp U          &kp I       &kp O        &kp P         &kp DEL
 &mo ARR_L  &kp A      &kp S      &kp D       &kp F          &kp G          &kp H            &kp J          &kp K       &kp L        &kp BSPC      &kp ENTER
 &kp LSHFT  &kp Z      &kp X      &kp C       &kp V          &mo SYM_L      &kp B            &kp N          &kp M       &out OUT_TOG &lt 5 LANG1   &rshifty
-&mo MAC_L  &kp GLOBE  &kp LALT   &kp LWIN    &kp LCTRL      &kp SPACE      &kp SPACE        &mo NUM_L      &kp RCTRL   &kp RWIN     &kp RALT      &mo ONE_L
+&mo MAC_L  &kp TAB    &kp LALT   &kp LWIN    &kp LCTRL      &kp SPACE      &kp SPACE        &mo NUM_L      &kp RCTRL   &kp RWIN     &kp RALT      &mo ONE_L
             >;
         };
 
         arr_layer {
             display-name = "Arrow";
             bindings = <
-&kp TAB     &kp PG_UP    &kp LS(LEFT)   &kp UP        &kp LS(RIGHT)   &kp DEL      &trans      &kp N7         &kp N8      &kp N9     &kp DEL             &kp PSCRN
+&trans      &kp PG_UP    &kp LS(LEFT)   &kp UP        &kp LS(RIGHT)   &kp DEL      &trans      &kp N7         &kp N8      &kp N9     &kp DEL             &kp PSCRN
 &none       &kp PG_DN    &kp LEFT       &kp DOWN      &kp RIGHT       &kp BSPC     &trans      &kp N4         &kp N5      &kp N6     &trans              &trans
-&kp CAPS    &mkp MB4     &kp HOME       &mkp MB5      &kp END         &kp ENTER    &kp INS     &kp N1         &kp N2      &kp N3     &kp LC(LG(SPACE))   &trans
+&trans      &mkp MB4     &kp HOME       &mkp MB5      &kp END         &kp ENTER    &kp INS     &kp N1         &kp N2      &kp N3     &kp LC(LG(SPACE))   &trans
 &trans      &trans       &kp LALT       &kp LWIN      &kp LCTRL       &kp SPACE    &kp SPACE   &trans         &kp N0      &trans     &trans              &trans
             >;
         };
@@ -119,10 +119,10 @@
         num_layer {
             display-name = "Num";
             bindings = <
-&kp CAPS    &kp N1      &kp N2    &kp N3    &kp N4    &kp N5       &kp N6       &kp KP_N7  &kp KP_N8   &kp KP_N9    &kp N0        &kp KP_EQUAL
-&kp TAB     &kp F1      &kp F2    &kp F3    &kp F4    &kp F5       &kp F6       &kp KP_N4  &kp KP_N5   &kp KP_N6    &kp BSPC      &kp KP_ENTER
+&kp KP_NUM  &kp N1      &kp N2    &kp N3    &kp N4    &kp N5       &kp N6       &kp KP_N7  &kp KP_N8   &kp KP_N9    &kp N0        &kp KP_EQUAL
+&kp CAPS    &kp F1      &kp F2    &kp F3    &kp F4    &kp F5       &kp F6       &kp KP_N4  &kp KP_N5   &kp KP_N6    &kp BSPC      &kp KP_ENTER
 &trans      &kp F7      &kp F8    &kp F9    &kp F10   &kp F11      &kp F12      &kp KP_N1  &kp KP_N2   &kp KP_N3    &kp KP_PLUS   &kp KP_MULTIPLY
-&kp KP_NUM  &trans      &trans    &trans    &trans    &kp SPACE    &kp SPACE    &none      &kp KP_N0   &kp KP_DOT   &kp KP_MINUS  &kp KP_DIVIDE
+&trans      &trans      &trans    &trans    &trans    &kp SPACE    &kp SPACE    &none      &kp KP_N0   &kp KP_DOT   &kp KP_MINUS  &kp KP_DIVIDE
             >;
         };
 
