@@ -19,8 +19,9 @@
 #define SYM_L 3
 #define MAC_L 4
 #define HAN_L 5
-#define ONE_L 6
+#define BLT_L 6
 #define CON_L 7
+#define ONE_L 8
 
 // lt config
 &lt { quick_tap_ms = <200>; };
@@ -102,7 +103,7 @@
 &kp ESC    &kp Q      &kp W      &kp E       &kp R          &kp T          &kp Y            &kp U          &kp I       &kp O        &kp P         &kp DEL
 &mo ARR_L  &kp A      &kp S      &kp D       &kp F          &kp G          &kp H            &kp J          &kp K       &kp L        &kp BSPC      &kp ENTER
 &kp LSHFT  &kp Z      &kp X      &kp C       &kp V          &mo SYM_L      &kp B            &kp N          &kp M       &out OUT_TOG &lt 5 LANG1   &rshifty
-&mo MAC_L  &kp TAB    &kp LALT   &kp LWIN    &kp LCTRL      &kp SPACE      &kp SPACE        &mo NUM_L      &kp RCTRL   &kp RWIN     &kp RALT      &mo ONE_L
+&mo MAC_L  &kp TAB    &kp LALT   &kp LWIN    &kp LCTRL      &kp SPACE      &mo ONE_L        &mo NUM_L      &kp RCTRL   &kp RWIN     &kp RALT      &mo ONE_L
             >;
         };
 
@@ -156,8 +157,8 @@
             >;
         };
 
-        onehand_layer {
-            display-name = "Onehand";
+        bluetooth_layer {
+            display-name = "bluetooth";
             bindings = <
 &none          &out OUT_BLE    &out OUT_USB     &bt BT_PRV      &bt BT_NXT      &trans          &kp ESC    &kp Q     &kp W     &kp E     &kp R     &kp T
 &out OUT_TOG   &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &kp TAB    &kp A     &kp S     &kp D     &kp F     &kp G
@@ -173,6 +174,16 @@
 &trans       &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
 &trans       &trans     &trans     &trans     &trans     &none      &trans     &trans     &trans     &trans     &trans     &trans
 &trans       &trans     &trans     &trans     &trans     &trans     &trans     &none      &trans     &trans     &trans     &trans
+            >;
+        };
+
+        onehand_layer {
+            display-name = "Onehand";
+            bindings = <
+&trans       &kp P      &kp O      &kp I      &kp U      &kp Y      &trans     &trans     &trans     &trans     &trans     &trans
+&kp TAB      &kp BSPC   &kp L      &kp K      &kp J      &kp H      &trans     &trans     &trans     &trans     &trans     &trans
+&sk LSHFT    &kp LANG1  &kp DOT    &kp M      &kp N      &kp B      &trans     &trans     &trans     &trans     &trans     &trans
+&sk LCTRL    &sk LWIN   &sk LALT   &sk LWIN   &sk LCTRL  &kp SPACE  &none      &trans     &trans     &trans     &trans     &trans
             >;
         };
     };
