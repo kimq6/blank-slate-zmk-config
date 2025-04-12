@@ -11,6 +11,7 @@
 #include <dt-bindings/zmk/keys.h>  // for keycodes (A, B, C, ..., ESC, TAB, ...)
 #include <dt-bindings/zmk/bt.h>  // for BT_SEL and BT_CLR
 #include <dt-bindings/zmk/outputs.h>  // for usb outputs or bluetooth outputs
+#include <dt-bindings/zmk/pointing.h>  // for mouse keys
 #include <dt-bindings/zmk/mouse.h>  // mouse key
 
 // layers
@@ -180,10 +181,10 @@
         onehand_layer {
             display-name = "Onehand";
             bindings = <
-&trans       &kp P      &kp O      &kp I      &kp U      &kp Y      &trans     &trans     &trans     &trans     &trans     &trans
-&kp TAB      &kp BSPC   &kp L      &kp K      &kp J      &kp H      &trans     &trans     &trans     &trans     &trans     &trans
-&sk LSHFT    &kp LANG1  &kp DOT    &kp M      &kp N      &kp B      &trans     &trans     &trans     &trans     &trans     &trans
-&sk LCTRL    &sk LWIN   &sk LALT   &sk LWIN   &sk LCTRL  &kp SPACE  &none      &trans     &trans     &trans     &trans     &trans
+&trans       &kp P      &kp O      &kp I      &kp U      &kp Y      &msc SCRL_UP   &mkp MB1       &mmv MOVE_UP   &mkp MB2        &trans          &trans
+&kp TAB      &kp BSPC   &kp L      &kp K      &kp J      &kp H      &msc SCRL_DOWN &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans          &trans
+&sk LSHFT    &kp LANG1  &kp DOT    &kp M      &kp N      &kp B      &msc SCRL_LEFT &mkp MB4       &mkp MB3       &mkp MB5        &msc SCRL_RIGHT &trans
+&sk LCTRL    &sk LWIN   &sk LALT   &sk LWIN   &sk LCTRL  &kp SPACE  &none          &trans         &trans         &trans          &trans          &trans
             >;
         };
     };
