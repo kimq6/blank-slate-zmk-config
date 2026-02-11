@@ -210,5 +210,7 @@
 &mt DQT SQT    &mt COLON SEMI   &kp N4         &kp N5    &kp N6    &kp BSPC    &trans        &trans        &trans       &trans      &trans        &trans
 &mt STAR UNDER &mt SLASH QMARK  &kp N1         &kp N2    &kp N3    &kp ENTER   &trans        &trans        &trans       &trans      &trans        &trans
 &trans         &trans           &mt COMMA DOT  &kp N0    &none     &kp trans   &trans        &trans        &trans       &trans      &trans        &trans
+            >;
+        };
     };
 };
