@@ -23,6 +23,8 @@
 #define BLT_L 6
 #define CON_L 7
 #define ONE_L 8
+#define FUN_L 9
+#define LNM_L 10
 
 // lt config
 &lt { 
@@ -106,28 +108,28 @@
             bindings = <
 &kp ESC        &kp Q             &kp W      &kp E       &kp R          &kp T          &kp Y            &kp U          &kp I       &kp O        &kp P         &kp DEL
 &lt ARR_L TAB  &kp A             &kp S      &kp D       &kp F          &kp G          &kp H            &kp J          &kp K       &kp L        &kp BSPC      &kp ENTER
-&kp LSHFT      &kp Z             &kp X      &kp C       &kp V          &mo SYM_L      &kp B            &kp N          &kp M       &out OUT_TOG &lt 5 LANG1   &rshifty
-&mo MAC_L      &kp LS(LC(LALT))  &kp LALT   &kp LWIN    &kp LCTRL      &kp SPACE      &mo ONE_L        &mo NUM_L      &kp RCTRL   &kp RWIN     &kp RALT      &mo BLT_L
+&kp LSHFT      &kp Z             &kp X      &kp C       &kp V          &mo SYM_L      &kp B            &kp N          &kp M       &mo BLT_L    &lt 5 LANG1   &rshifty
+&mo MAC_L      &kp LS(LC(LALT))  &kp LALT   &kp LWIN    &kp LCTRL      &kp SPACE      &mo ONE_L        &mo NUM_L      &kp RCTRL   &kp RWIN     &kp RALT      &out OUT_TOG
             >;
         };
 
         arr_layer {
             display-name = "Arrow";
             bindings = <
-&kp CAPS    &kp PG_UP    &kp LS(LEFT)    &kp UP        &kp LS(RIGHT)    &kp DEL      &trans      &kp N7         &kp N8      &kp N9     &kp DEL             &kp PSCRN
-&none       &kp PG_DN    &kp LEFT        &kp DOWN      &kp RIGHT        &kp BSPC     &trans      &kp N4         &kp N5      &kp N6     &trans              &trans
-&trans      &kp HOME     &msc SCRL_LEFT  &kp END       &msc SCRL_RIGHT  &kp ENTER    &kp INS     &kp N1         &kp N2      &kp N3     &kp LC(LG(SPACE))   &trans
-&trans      &trans       &kp LALT        &kp LWIN      &kp LCTRL        &kp SPACE    &kp SPACE   &trans         &kp N0      &trans     &trans              &trans
+&kp CAPS    &kp PG_UP    &kp LS(LEFT)    &kp UP        &kp LS(RIGHT)    &kp DEL      &msc SCRL_UP      &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &mkp MB5   &kp SCROLLLOCK
+&none       &kp PG_DN    &kp LEFT        &kp DOWN      &kp RIGHT        &kp BSPC     &msc SCRL_DOWN    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB4   &kp ENTER
+&kp LSHFT   &kp HOME     &msc SCRL_LEFT  &kp END       &msc SCRL_RIGHT  &kp ENTER    &kp INS           &msc SCRL_LEFT  &mkp MCLK       &msc SCRL_RIGHT  &kp LANG2  &kp K_APP
+&kp PSCRN   &sk LWIN     &sk LALT        &sk LCTRL     &mo ONE_L        &kp SPACE    &kp SPACE         &trans          &trans          &trans           &trans     &kp LC(I)
             >;
         };
 
         num_layer {
             display-name = "Num";
             bindings = <
-&kp KP_NUM  &kp N1      &kp N2    &kp N3    &kp N4    &kp N5       &kp N6       &kp KP_N7  &kp KP_N8   &kp KP_N9    &kp N0        &kp KP_EQUAL
-&kp CAPS    &kp F1      &kp F2    &kp F3    &kp F4    &kp F5       &kp F6       &kp KP_N4  &kp KP_N5   &kp KP_N6    &kp BSPC      &kp KP_ENTER
-&trans      &kp F7      &kp F8    &kp F9    &kp F10   &kp F11      &kp F12      &kp KP_N1  &kp KP_N2   &kp KP_N3    &kp KP_PLUS   &kp KP_MULTIPLY
-&trans      &trans      &trans    &trans    &trans    &kp SPACE    &kp SPACE    &none      &kp KP_N0   &kp KP_DOT   &kp KP_MINUS  &kp KP_DIVIDE
+&kp TAB     &kp N1      &kp N2    &kp N3    &kp N4     &kp N5      &kp N6       &kp N7     &kp N8      &kp N9       &kp N0        &kp KP_EQUAL
+&kp F7      &kp F8      &kp F9    &kp F10   &kp F11    &kp F12     &kp KP_NUM   &kp N4     &kp N5      &kp N6       &kp BSPC      &kp KP_ENTER
+&kp F1      &kp F2      &kp F3    &kp F4    &kp F5     &kp F6      &kp COMMA    &kp N1     &kp N2      &kp N3       &kp KP_PLUS   &kp KP_MULTIPLY
+&kp LSHFT   &kp LCTRL   &kp LALT  &kp LWIN  &mo FUN_L  &kp SPACE   &kp SPACE    &none      &kp N0      &kp KP_DOT   &kp KP_MINUS  &kp KP_DIVIDE
             >;
         };
 
@@ -135,19 +137,19 @@
             display-name = "Sym";
             bindings = <
 &kp GRAVE  &kp EXCL   &kp AT     &kp HASH   &kp DOLLAR   &kp PERCENT  &kp CARET    &kp AMPS   &kp ASTRK   &kp LPAR    &kp RPAR   &kp UNDER
-&kp TILDE  &kp LBKT   &kp RBKT   &kp LBRC   &kp RBRC     &kp BSLH     &kp PIPE     &kp LT     &kp GT      &kp QMARK   &kp SEMI   &kp SQT
-&kp EQUAL  &kp PLUS   &kp MINUS  &kp STAR   &kp SLASH    &none        &kp K_APP    &kp COMMA  &kp DOT     &kp SLASH   &kp COLON  &kp DQT
-&trans     &trans     &trans     &trans     &trans       &trans       &trans       &trans     &trans      &trans      &trans     &trans
+&kp TILDE  &kp LBKT   &kp RBKT   &kp LBRC   &kp RBRC     &trans       &trans       &kp LT     &kp GT      &kp QMARK   &kp SEMI   &kp SQT
+&kp EQUAL  &kp PLUS   &kp MINUS  &kp BSLH   &kp PIPE     &none        &trans       &kp COMMA  &kp DOT     &kp SLASH   &kp COLON  &kp DQT
+&kp LSHFT  &trans     &trans     &trans     &trans       &trans       &trans       &trans     &kp RCTRL   &kp RGUI    &kp RALT   &kp RSHFT
             >;
         };
 
         macro_layer {
             display-name = "Macro";
             bindings = <
-&trans        &kp LA(LC(LG(Q)))  &kp LA(LC(LG(W)))  &kp LA(LC(LG(E)))  &kp LA(LC(LG(R)))  &kp LA(LC(LG(T)))  &kp LA(LC(LG(Y)))  &kp LA(LC(LG(U)))  &kp LA(LC(LG(I)))  &kp LA(LC(LG(O)))  &kp LA(LC(LG(P)))  &trans
-&siql         &kp LA(LC(LG(A)))  &kp LA(LC(LG(S)))  &kp LA(LC(LG(D)))  &kp LA(LC(LG(F)))  &kp LA(LC(LG(G)))  &kp LA(LC(LG(H)))  &kp LA(LC(LG(J)))  &kp LA(LC(LG(K)))  &kp LA(LC(LG(L)))  &trans              &trans
-&trans        &kp LA(LC(LG(Z)))  &kp LA(LC(LG(X)))  &kp LA(LC(LG(C)))  &kp LA(LC(LG(V)))  &trans             &kp LA(LC(LG(B)))  &kp LA(LC(LG(N)))  &kp LA(LC(LG(M)))  &trans              &trans              &trans
-&trans        &none              &trans             &trans             &trans             &trans             &trans             &trans             &trans             &trans              &trans              &trans
+&kp RS(F19)    &kp RS(F20)    &kp RS(F21)    &kp RS(F22)    &kp RS(F23)    &kp RS(F24)    &trans      &kp C_BRI_DN      &kp C_BRI_UP      &kp C_VOLUME_DOWN      &kp C_VOLUME_UP      &kp C_MUTE
+&kp RC(F19)    &kp RC(F20)    &kp RC(F21)    &kp RC(F22)    &kp RC(F23)    &kp RC(F24)    &trans      &kp C_PREV        &kp C_PP          &kp C_RW               &trans               &trans
+&kp RC(F13)    &kp RC(F14)    &kp RC(F15)    &kp RC(F16)    &kp RC(F17)    &kp RC(F18)    &trans      &trans      &trans      &trans      &trans      &trans
+&trans         &trans         &trans         &trans         &mo LNM_L      &trans         &trans      &trans      &trans      &trans      &trans      &trans
             >;
         };
 
@@ -164,10 +166,10 @@
         bluetooth_layer {
             display-name = "bluetooth";
             bindings = <
-&none          &out OUT_BLE    &out OUT_USB     &bt BT_PRV      &bt BT_NXT      &trans          &kp ESC    &kp Q     &kp W     &kp E     &kp R     &kp T
-&out OUT_TOG   &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &kp TAB    &kp A     &kp S     &kp D     &kp F     &kp G
-&bt BT_CLR     &trans          &trans           &trans          &trans          &trans          &sk LSHFT  &kp Z     &kp X     &kp C     &kp V     &sk LWIN
-&trans         &trans          &trans           &trans          &trans          &trans          &sk LCTRL  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none
+&none          &out OUT_BLE    &out OUT_USB     &bt BT_PRV      &bt BT_NXT      &trans          &trans      &trans      &trans      &trans      &trans      &trans
+&out OUT_TOG   &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &trans      &trans      &trans      &trans      &trans      &trans
+&bt BT_CLR     &trans          &trans           &trans          &trans          &trans          &trans      &trans      &trans      &none       &trans      &trans
+&trans         &trans          &trans           &trans          &trans          &trans          &trans      &trans      &trans      &trans      &trans      &trans
             >;
         };
 
@@ -184,11 +186,29 @@
         onehand_layer {
             display-name = "Onehand";
             bindings = <
-&trans       &kp P      &kp O      &kp I      &kp U      &kp Y      &msc SCRL_UP   &mkp MB1       &mmv MOVE_UP   &mkp MB2        &trans          &trans
-&kp TAB      &kp BSPC   &kp L      &kp K      &kp J      &kp H      &msc SCRL_DOWN &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans          &trans
-&sk LSHFT    &kp LANG1  &kp DOT    &kp M      &kp N      &kp B      &msc SCRL_LEFT &mkp MB4       &mkp MB3       &mkp MB5        &msc SCRL_RIGHT &trans
-&sk LCTRL    &sk LWIN   &sk LALT   &sk LWIN   &sk LCTRL  &kp SPACE  &none          &trans         &trans         &trans          &trans          &trans
+&trans       &kp P      &kp O      &kp I      &kp U      &kp Y      &trans        &trans        &trans       &trans      &trans        &trans
+&trans       &kp BSPC   &kp L      &kp K      &kp J      &kp H      &trans        &trans        &trans       &trans      &trans        &trans
+&trans       &kp LANG1  &kp M      &kp N      &kp B      &trans     &trans        &trans        &trans       &trans      &trans        &trans
+&trans       &trans     &trans     &trans     &none      &trans     &none         &trans        &trans       &trans      &trans        &trans
             >;
         };
+
+        function_layer {
+            display-name = "function";
+            bindings = <
+&trans      &kp KP_N1    &kp KP_N2   &kp KP_N3   &kp KP_N4   &kp KP_N5    &kp KP_N6    &kp KP_N7  &kp KP_N8   &kp KP_N9    &kp KP_N0   &trans
+&kp F19     &kp F20      &kp F21     &kp F22     &kp F23     &kp F24      &trans       &kp KP_N4  &kp KP_N5   &kp KP_N6    &trans      &trans
+&kp F13     &kp F14      &kp F15     &kp F16     &kp F17     &kp F18      &trans       &kp KP_N1  &kp KP_N2   &kp KP_N3    &trans      &kp RSHFT
+&kp LSHFT   &kp LCTRL    &kp LALT    &kp LWIN    &mo FUN_L   &kp SPACE    &kp SPACE    &none      &kp KP_N0   &kp RWIN     &kp RALT    &kp RCTRL
+            >;
+        };
+
+        leftnumber_layer {
+            display-name = "leftnumber";
+            bindings = <
+&mt LT LPAR    &mt GT RPAR      &kp N7         &kp N8    &kp N9    &kp DEL     &trans        &trans        &trans       &trans      &trans        &trans
+&mt DQT SQT    &mt COLON SEMI   &kp N4         &kp N5    &kp N6    &kp BSPC    &trans        &trans        &trans       &trans      &trans        &trans
+&mt STAR UNDER &mt SLASH QMARK  &kp N1         &kp N2    &kp N3    &kp ENTER   &trans        &trans        &trans       &trans      &trans        &trans
+&trans         &trans           &mt COMMA DOT  &kp N0    &none     &kp trans   &trans        &trans        &trans       &trans      &trans        &trans
     };
 };
