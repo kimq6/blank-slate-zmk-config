@@ -139,7 +139,7 @@
 &kp GRAVE  &kp EXCL   &kp AT     &kp HASH   &kp DOLLAR   &kp PERCENT  &kp CARET    &kp AMPS   &kp ASTRK   &kp LPAR    &kp RPAR   &kp UNDER
 &kp TILDE  &kp LBKT   &kp RBKT   &kp LBRC   &kp RBRC     &trans       &trans       &kp LT     &kp GT      &kp QMARK   &kp SEMI   &kp SQT
 &kp EQUAL  &kp PLUS   &kp MINUS  &kp BSLH   &kp PIPE     &none        &trans       &kp COMMA  &kp DOT     &kp SLASH   &kp COLON  &kp DQT
-&kp LSHFT  &trans     &trans     &trans     &trans       &trans       &trans       &trans     &kp RCTRL   &kp RGUI    &kp RALT   &kp RSHFT
+&kp LCTRL  &kp LSHFT  &trans     &trans     &mo LNM_L    &trans       &trans       &trans     &kp RCTRL   &kp RGUI    &kp RALT   &kp RSHFT
             >;
         };
 
@@ -149,7 +149,7 @@
 &kp RS(F19)    &kp RS(F20)    &kp RS(F21)    &kp RS(F22)    &kp RS(F23)    &kp RS(F24)    &trans      &kp C_BRI_DN      &kp C_BRI_UP      &kp C_VOLUME_DOWN      &kp C_VOLUME_UP      &kp C_MUTE
 &kp RC(F19)    &kp RC(F20)    &kp RC(F21)    &kp RC(F22)    &kp RC(F23)    &kp RC(F24)    &trans      &kp C_PREV        &kp C_PP          &kp C_RW               &trans               &trans
 &kp RC(F13)    &kp RC(F14)    &kp RC(F15)    &kp RC(F16)    &kp RC(F17)    &kp RC(F18)    &trans      &trans      &trans      &trans      &trans      &trans
-&trans         &trans         &trans         &trans         &mo LNM_L      &trans         &trans      &trans      &trans      &trans      &trans      &trans
+&trans         &trans         &trans         &trans         &trans         &trans         &trans      &trans      &trans      &trans      &trans      &trans
             >;
         };
 
