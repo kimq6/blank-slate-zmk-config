@@ -116,10 +116,10 @@
         arr_layer {
             display-name = "Arrow";
             bindings = <
-&kp CAPS    &kp PG_UP    &kp LS(LEFT)    &kp UP        &kp LS(RIGHT)    &kp DEL      &msc SCRL_UP      &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &mkp MB5   &kp SCROLLLOCK
-&none       &kp PG_DN    &kp LEFT        &kp DOWN      &kp RIGHT        &kp BSPC     &msc SCRL_DOWN    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB4   &kp ENTER
-&kp LSHFT   &kp HOME     &msc SCRL_LEFT  &kp END       &msc SCRL_RIGHT  &kp ENTER    &kp INS           &msc SCRL_LEFT  &mkp MCLK       &msc SCRL_RIGHT  &kp LANG2  &kp K_APP
-&kp PSCRN   &sk LWIN     &sk LALT        &sk LCTRL     &mo ONE_L        &kp SPACE    &kp SPACE         &trans          &trans          &trans           &trans     &kp LC(I)
+&kp CAPS    &kp PG_UP        &kp LS(LEFT)    &kp UP        &kp LS(RIGHT)    &kp DEL      &msc SCRL_UP      &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &mkp MB5   &kp SCROLLLOCK
+&none       &kp PG_DN        &kp LEFT        &kp DOWN      &kp RIGHT        &kp BSPC     &msc SCRL_DOWN    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB4   &kp ENTER
+&kp LSHFT   &kp HOME         &msc SCRL_LEFT  &kp END       &msc SCRL_RIGHT  &kp ENTER    &kp INS           &msc SCRL_LEFT  &mkp MCLK       &msc SCRL_RIGHT  &kp LANG2  &kp K_APP
+&kp PSCRN   &sk LS(LC(LALT)) &sk LALT        &sk LWIN      &sk LCTRL        &kp SPACE    &kp SPACE         &trans          &trans          &trans           &trans     &kp LC(I)
             >;
         };
 
@@ -176,10 +176,10 @@
         conditional_layer {
             display-name = "conditional";
             bindings = <
-&win_off  &soft_off     &kp C_PREV    &kp C_STOP    &kp C_PP      &kp C_NEXT  &trans    &kp C_BRI_DN  &kp C_BRI_UP  &kp C_MUTE   &kp C_VOL_DN   &kp C_VOL_UP
+&soft_off &trans        &kp C_PREV    &kp C_STOP    &kp C_PP      &kp C_NEXT  &trans    &kp C_BRI_DN  &kp C_BRI_UP  &kp C_MUTE   &kp C_VOL_DN   &kp C_VOL_UP
 &trans    &trans        &trans        &trans        &trans        &trans      &trans    &trans        &trans        &trans       &trans         &trans
-&trans    &trans        &trans        &trans        &trans        &trans      &trans    &trans        &trans        &trans       &trans         &trans
-&trans    &trans        &trans        &trans        &trans        &trans      &trans    &trans        &trans        &trans       &trans         &trans
+&trans    &trans        &trans        &trans        &trans        &none       &trans    &trans        &trans        &trans       &trans         &trans
+&trans    &trans        &trans        &trans        &trans        &trans      &trans    &none         &trans        &trans       &trans         &trans
             >;
         };
 
